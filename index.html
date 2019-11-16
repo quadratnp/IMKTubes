@@ -5,19 +5,21 @@
         MUSICPLEER.APP
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="image/logo(1).ico" image="/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="javascript/script.js"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style2.css">
-
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
@@ -33,8 +35,8 @@
 <body>
     <!-- <nav class="w3-sidebar w3-black w3-top" style="width:300px">
         <img src="image/logo musicpleer.png" class="w3-image w3-center w3-padding-32 w3-border-bottom w3-border-bottom-white"> -->
-        <!--Nomer 1 beberapa di ganti nanti-->
-        <!-- <div class="w3-cell-row" style="padding-top: 30%;">
+    <!--Nomer 1 beberapa di ganti nanti-->
+    <!-- <div class="w3-cell-row" style="padding-top: 30%;">
             <div class="w3-container w3-cell" style="padding-left: 25px;">
                 <a class="w3-button w3-hover-black"><i class="fa fa-user"
                         style="font-size:48px; color: #FAA749;"></i></a>
@@ -85,182 +87,333 @@
             <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'contact')" style="color:white" type="button">
                 <h4>CONTACT</h4>
             </button> -->
-            <!-- <a  class="w3-bar-item tablink" onclick="openContent(this,'faq')"><h4>FAQ</h4></a> -->
-            <!-- <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'faq')" style="color:white" type="button">
+    <!-- <a  class="w3-bar-item tablink" onclick="openContent(this,'faq')"><h4>FAQ</h4></a> -->
+    <!-- <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'faq')" style="color:white" type="button">
                 <h4>FAQ</h4>
             </button>
             <h4 style="color: #FAA749;">&copy 2013-2019 Musicpleer.app</h4>
         </div>
     </nav> -->
     <div class="wrapper">
-            <!-- Sidebar  -->
-            <nav id="sidebar">
-                <div class="sidebar-header">
-                        <img src="image/logo musicpleer.png" class="img-fluid" >
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="image/logo musicpleer.png" class="btn img-fluid" onclick="openContent(this,'home')">
+            </div>
+
+            <ul class="list-unstyled components">
+
+
+                <li>
+                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'home')">Home</a>
+                </li>
+                <li>
+                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'search')">Search</a>
+                </li>
+                <li>
+                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</a>
+                </li>
+                <li>
+                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</a>
+                </li>
+                <li>
+                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</a>
+                </li>
+
+            </ul>
+
+
+        </nav>
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                <i class="fas fa-align-left"></i>
+                                <span>Toggle Sidebar</span>
+                            </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-align-justify"></i>
+                            </button>
+
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCenter">SIGNIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCentersignup">SIGNUP</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-    
-                <ul class="list-unstyled components">
-                    <li>
-                        <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'home')">Home</a>
-                    </li>
-                    <li>
-                        <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'search')">Search</a>
-                    </li>
-                </ul>
-    
-                <ul class="list-unstyled CTAs">
-                        <p class="d-inline tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</p>
-                        <p class="d-inline tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</p>
-                        <p class="d-inline tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</p>
-                </ul>
             </nav>
-    
-            <!-- Page Content  -->
-            <div id="content">
-    
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-    
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                            <span>Toggle Sidebar</span>
+            <div class="w3-container w3-rest tabs w3-animate-opacity" id="home">
+                <div class="w3-padding-32">
+                    <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">HOME</span>
+
+                </div>
+                <div>
+                    <div class="w3-panel">
+                        <h3 class="w3-left">
+                            New Release
+                        </h3>
+                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable">
+                            See all
                         </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-align-justify"></i>
+                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">New Release</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="w3-panel">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card" style="height:100%">
+                                                    <img src="image/lose-you-to-love-me.jpg" class="img-fluid">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank">  Selena Gomez 
+                                                  Lose You To Love Me </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/maroon 5 memories.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
+                                                Memories</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
+                                                I Don't Care</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/honne location unknown.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
+                                                        Location Unknown</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
+                                                        Rangkum</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
+                                                        No One Can Stop Us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/tolong budi doremi.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
+                                                            Tolong</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/billie eilish bad guy.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
+                                                            Bad Guy</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/lil nas X panini.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
+                                                            Panini</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding w3-margin-top">
+                        <div class="w3-third imageslideshow">
+                            <div class="w3-card">
+                                <img src="image/lose-you-to-love-me.jpg" class="img-fluid">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank">  Selena Gomez <br> 
+                                            Lose You To Love Me </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-third imageslideshow">
+                            <div class="w3-card">
+                                <img src="image/maroon 5 memories.jpg" class="img-fluid">
+                                <div class="w3-container w3-center">
+                                    <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5 <br>
+                                            Memories</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w3-third imageslideshow">
+                            <div class="w3-card">
+                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="img-fluid">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
+                                            <br> I Don't Care</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="we-panel">
+                        <h3 class="w3-left">
+                            Old Songs
+                        </h3>
+                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable1">
+                            See all
                         </button>
-    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav ml-auto">
-                                <li class="nav-item active">
-                                    <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCentersignup">SignUp</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-    <div class="w3-container w3-twothird tabs w3-animate-opacity" id="home" style="margin-left:340px; margin-right: 40px;">
-        <div class="w3-padding-32">
-            <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom">HOME</span>
-        </div>
-        <div>
-            <div class="w3-panel">
-                <h3 class="w3-left">
-                    New Release
-                </h3>
-                <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable">
-                    See all
-                </button>
-                <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalScrollableTitle">New Release</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Old Songs</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="w3-panel">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card w3-display-container w3-hover-opacity">
-                                            <audio id="player" src="song/Selena Gomez - Lose You To Love Me.mp3"></audio>
-                                            <div class="w3-display-middle w3-display-hover w3-xlarge">
-                                                <button onclick="document.getElementById('player').play()"><i class="fa fa-play"></i></button>
-                                            </div>
-                                            <img src="image/lose-you-to-love-me.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank"> Selena Gomez
-                                                    Lose You To Love Me </a>
-                                            </div>
-                                        </div>
+                                  </button>
                                     </div>
+                                    <div class="modal-body">
+                                        <div class="w3-panel">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/lose-you-to-love-me.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank">  Selena Gomez 
+                                                                    Lose You To Love Me </a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/maroon 5 memories.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
-                                                    Memories</a>
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/maroon 5 memories.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
+                                                                    Memories</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
-                                                    I Don't Care</a>
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
+                                                                    I Don't Care</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/honne location unknown.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
-                                                    Location Unknown</a>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/honne location unknown.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
+                                                                            Location Unknown</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
-                                                    Rangkum</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
+                                                                            Rangkum</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
-                                                    No One Can Stop Us</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
+                                                                            No One Can Stop Us</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/tolong budi doremi.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
-                                                    Tolong</a>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/tolong budi doremi.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
+                                                                                Tolong</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card w3-display-container w3-hover-opacity imageslideshow" style="width: 50%;">
-                                            <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                                            <audio id="player" src="song/bad guy.mp3"></audio>
-                                            <div class="w3-display-middle w3-display-hover w3-xlarge">
-                                                <button onclick="document.getElementById('player').play()"><i class="fa fa-play"></i></button>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/billie eilish bad guy.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
+                                                                                Bad Guy</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
-                                                    Bad Guy
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/lil nas X panini.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
-                                                    Panini</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/lil nas X panini.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
+                                                                                Panini</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -268,295 +421,148 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="w3-row-padding w3-margin-top">
-                <div class="w3-third imageslideshow">
-                    <div class="w3-card">
-                        <img src="image/lose-you-to-love-me.jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank"> Selena Gomez <br>
-                                Lose You To Love Me </a>
+                    <div class="w3-row-padding w3-margin-top">
+                        <div class="w3-third imageslideshow">
+                            <div class="w3-card">
+                                <img src="image/honne location unknown.jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
+                                            <br> Location Unknown</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="w3-third imageslideshow">
-                    <div class="w3-card">
-                        <img src="image/maroon 5 memories.jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5 <br>
-                                Memories</a>
+                        <div class="w3-third">
+                            <div class="w3-card imageslideshow">
+                                <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
+                                            <br> Rangkum</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="w3-third imageslideshow">
-                    <div class="w3-card">
-                        <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
-                                <br> I Don't Care</a>
+                        <div class="w3-third">
+                            <div class="w3-card imageslideshow">
+                                <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
+                                            <br> No One Can Stop Us</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div>
-            <div class="we-panel">
-                <h3 class="w3-left">
-                    Old Songs
-                </h3>
-                <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable1">
-                    See all
-                </button>
-                <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalScrollableTitle">Old Songs</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div>
+                    <div>
+                        <h3 class="w3-left">
+                            Top Songs 2018
+                        </h3>
+                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable2">
+                            See all
+                        </button>
+                        <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Top Songs 2018</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="w3-panel">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/lose-you-to-love-me.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank"> Selena Gomez
-                                                    Lose You To Love Me </a>
-                                            </div>
-                                        </div>
+                                  </button>
                                     </div>
+                                    <div class="modal-body">
+                                        <div class="w3-panel">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/lose-you-to-love-me.jpg" style="width:100%">
 
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/maroon 5 memories.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
-                                                    Memories</a>
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank">  Selena Gomez 
+                                                                    Lose You To Love Me </a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
-                                                    I Don't Care</a>
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/maroon 5 memories.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
+                                                                    Memories</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/honne location unknown.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
-                                                    Location Unknown</a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
-                                                    Rangkum</a>
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
+                                                                    I Don't Care</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/honne location unknown.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
+                                                                            Location Unknown</a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
-                                                    No One Can Stop Us</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
+                                                                            Rangkum</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/tolong budi doremi.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
-                                                    Tolong</a>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
-                                                    Bad Guy</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
+                                                                            No One Can Stop Us</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="w3-row-padding w3-margin-top">
+                                            <div class="w3-third imageslideshow">
+                                                <div class="w3-card">
+                                                    <img src="image/tolong budi doremi.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
+                                                                                Tolong</a>
+                                                    </div>
+                                                </div>
+                                            </div>
 
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/lil nas X panini.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
-                                                    Panini</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/billie eilish bad guy.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
+                                                                                Bad Guy</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-row-padding w3-margin-top">
-                <div class="w3-third imageslideshow">
-                    <div class="w3-card">
-                        <img src="image/honne location unknown.jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
-                                <br> Location Unknown</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="w3-third">
-                    <div class="w3-card imageslideshow">
-                        <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
-                                <br> Rangkum</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w3-third">
-                    <div class="w3-card imageslideshow">
-                        <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                        <div class="w3-container w3-center">
-                            <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
-                                <br> No One Can Stop Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div>
-                <h3 class="w3-left">
-                    Top Songs 2018
-                </h3>
-                <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable2">
-                    See all
-                </button>
-                <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalScrollableTitle">Top Songs 2018</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="w3-panel">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/lose-you-to-love-me.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank"> Selena Gomez
-                                                    Lose You To Love Me </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/maroon 5 memories.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank">Maroon 5
-                                                    Memories</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank">Ed Sheeran&Justin Bieber
-                                                    I Don't Care</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/honne location unknown.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank">Honne
-                                                    Location Unknown</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank">Polka Wars
-                                                    Rangkum</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank">Dipha Barus (feat. Kallula)
-                                                    No One Can Stop Us</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding w3-margin-top">
-                                    <div class="w3-third imageslideshow">
-                                        <div class="w3-card">
-                                            <img src="image/tolong budi doremi.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
-                                                    Tolong</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
-                                                    Bad Guy</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="w3-third">
-                                        <div class="w3-card imageslideshow">
-                                            <img src="image/lil nas X panini.jpg" style="width:100%">
-                                            <div class="w3-container w3-center">
-                                                <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
-                                                    Panini</a>
+                                            <div class="w3-third">
+                                                <div class="w3-card imageslideshow">
+                                                    <img src="image/lil nas X panini.jpg" style="width:100%">
+                                                    <div class="w3-container w3-center">
+                                                        <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
+                                                                                Panini</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -564,374 +570,361 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-row-padding w3-margin-top">
-            <div class="w3-third imageslideshow">
-                <div class="w3-card">
-                    <img src="image/tolong budi doremi.jpg" style="width:100%">
-                    <div class="w3-container w3-center">
-                        <h5>Budi Doremi</h5>
-                        <h5>Tolong</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-third">
-                <div class="w3-card imageslideshow">
-                    <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                    <div class="w3-container w3-center">
-                        <h5>Billie Eilish</h5>
-                        <h5>Bad Guy</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w3-third">
-                <div class="w3-card imageslideshow">
-                    <img src="image/lil nas X panini.jpg" style="width:100%">
-                    <div class="w3-container w3-center">
-                        <h5>Lil Nas X</h5>
-                        <h5>Panini</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="w3-container w3-twothird tabs w3-animate-opacity" id="search" style="margin-left:340px; margin-right: 40px; display:none">
-        <div class="w3-padding-32">
-            <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom">SEARCH</span>
-
-        </div>
-        <div class="search w3-border-bottom w3-border-bottom-black">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for song" title="Type in a name">
-        </div>
-        <ul id="myUL">
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/tolong budi doremi.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>Tolong</p>
-                    <p>Budi Doremi</p>
-                    <p>Pop</p>
-                    <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank" class="btn btn-warning d-inline" type="button"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/billie eilish bad guy.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>Bad Guy</p>
-                    <p>Billie Eilish</p>
-                    <p>Pop-trap</p>
-                    <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" type="button" target="_blank" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>No One Can Stop Us</p>
-                    <p>Dipha Barus(feat. Kallula)</p>
-                    <p>Tropical House, Dance</p>
-                    <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>i dont care</p>
-                    <p>ed sheeran justin bieber</p>
-                    <p>Pop</p>
-                    <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/honne location unknown.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>location unknown</p>
-                    <p>honne</p>
-                    <p>Alternatif/indie</p>
-                    <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/khalid talk.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>talk</p>
-                    <p>khalid</p>
-                    <p>R&B</p>
-                    <a href="http://fs1.imglov.com/server1/15/9074431785c623e100d82d.mp3?t=vCS0w_sc8rHg9ahguk5VXg&expires=1572241519&title=Khalid%20-%20Talk.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/lil nas X panini.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>panini</p>
-                    <p>lil nas X</p>
-                    <p>Alternatif/indie, Folk</p>
-                    <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col w3-display-container w3-hover-opacity" style="width: 200px;">
-                    <audio id="player" src="song/Selena Gomez - Lose You To Love Me.mp3"></audio>
-                    <div class="w3-display-middle w3-display-hover w3-xlarge">
-                        <button onclick="document.getElementById('player').play()"><i class="fa fa-play"></i></button>
-                    </div>
-                    <img src="image/lose-you-to-love-me.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>lose you to love me</p>
-                    <p>Selena Gomez</p>
-                    <p>Adult Contemporary, Pop Soul</p>
-                    <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/maroon 5 memories.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>memories</p>
-                    <p>maroon 5</p>
-                    <p>Pop</p>
-                    <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/money honey.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>money honey</p>
-                    <p>Dipha Barus</p>
-                    <p>Dance/Elektronik</p>
-                    <a href="http://s-a756577b.mp3pro.xyz/e0d05641595ef4f2ba9ef/Dipha%20Barus%20-%20Money%20Honey%20%28Count%20Me%20In%29%20%5BOfficial%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/Polka_Wars-Rangkum.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>Rangkum</p>
-                    <p>Polka_Wars</p>
-                    <p>Indie Rock</p>
-                    <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-            <li class="w3-bar" style="display:none">
-                <div class="w3-col" style="width: 200px;">
-                    <img src="image/YOVIE WIDIANTO, Tulus & Glenn Fredly - Adu Rayu.jpg" class="w3-image">
-                </div>
-                <div class="w3-rest" style="margin-left: 25%;">
-                    <p>Adu Rayu</p>
-                    <p>YOVIE WIDIANTO, Tulus & Glenn Fredly</p>
-                    <p>Pop</p>
-                    <a href="http://s-a44472a0.mp3pro.xyz/81ab0d80595ef1046481e/Yovie%2C%20Tulus%2C%20Glenn%20Fredly%20-%20Adu%20Rayu%20%28Lirik%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download"
-                            aria-hidden="true"></i>Download</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="w3-container w3-twothird tabs w3-animate-opacity" id="about" style="margin-left:340px; margin-right: 40px;display:none">
-        <div class="w3-padding-32">
-            <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom">ABOUT</span>
-        </div>
-        <div>
-            <p>Musicpleer is a lightweight single-page MP3 Search Engine application that allows you to search, play and download MP3 files. Our crawlers searches the web for free publicly available MP3 files. You can explore new music, artists, albums,
-                and more. Unlike most other similar sites, Musicpleer is not a youtube to MP3 converter, but searches the entire internet for high quality free MP3 files. As of this writing our database contains more than 3 million unique MP3 links.
-            </p>
-        </div>
-    </div>
-    <div class="w3-container w3-twothird tabs w3-animate-opacity" id="contact" style="margin-left:340px; margin-right: 40px;display:none">
-        <div class="w3-padding-32">
-            <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom">CONTACT</span>
-        </div>
-        <div class="alert alert-success alert-dismissible" id="alert" style="display: none;">
-            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Pesan telah berhasil terkirim
-        </div>
-        <div class="w3-container">
-            <table class="w3-table tabel">
-                <tr>
-                    <td>Nama</td>
-                    <td>:</td>
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control clear" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="w3-row-padding w3-margin-top">
+                        <div class="w3-third imageslideshow">
+                            <div class="w3-card">
+                                <img src="image/tolong budi doremi.jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank">Budi Doremi
+                                            <br> Tolong</a>
+                                </div>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>:</td>
-                    <td>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control clear" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+
+                        <div class="w3-third">
+                            <div class="w3-card imageslideshow">
+                                <img src="image/billie eilish bad guy.jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" target="_blank">Billie Eilish
+                                            <br> Bad Guy</a>
+                                </div>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Message</td>
-                    <td>:</td>
-                    <td>
-                        <div class="input-group">
-                            <textarea class="form-control clear" aria-label="With textarea"></textarea>
+
+                        <div class="w3-third">
+                            <div class="w3-card imageslideshow">
+                                <img src="image/lil nas X panini.jpg" style="width:100%">
+                                <div class="w3-container w3-center">
+                                    <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank">Lil Nas X
+                                        <br> Panini</a>
+                                </div>
+                            </div>
                         </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <button type="button" id="btn" class="btn btn-primary w3-margin-top" onclick="alert()"><i
-                class="fa fa-paper-plane " aria-hidden="true"></i>Submit</button>
-    </div>
-    <div class="w3-container w3-twothird tabs w3-animate-opacity" id="faq" style="margin-left:340px; margin-right: 40px;display: none;">
-        <div class="w3-padding-32">
-            <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom">FAQ</span>
-        </div>
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    </div>
+                </div>
+            </div>
+            <div class="w3-container w3-twothird tabs w3-animate-opacity" id="search" style="display:none">
+                <div class="w3-padding-32">
+                    <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom ">SEARCH</span>
+
+                </div>
+                <div class="search w3-border-bottom w3-border-bottom-black">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for song" title="Type in a name">
+                </div>
+                <ul id="myUL">
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/tolong budi doremi.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>Tolong</p>
+                            <p>Budi Doremi</p>
+                            <p>Pop</p>
+                            <a href="http://s-905b5892.mp3pro.xyz/c2730e71595ef087f1fca/Budi%20Doremi%20-%20Tolong%20%28Official%29.mp3" target="_blank" class="btn btn-warning d-inline" type="button"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/billie eilish bad guy.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>Bad Guy</p>
+                            <p>Billie Eilish</p>
+                            <p>Pop-trap</p>
+                            <a href="http://s-add4e798.mp3pro.xyz/99c25dce595eed53fab54/Billie%20Eilish%20-%20bad%20guy.mp3" type="button" target="_blank" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>No One Can Stop Us</p>
+                            <p>Dipha Barus(feat. Kallula)</p>
+                            <p>Tropical House, Dance</p>
+                            <a href="http://s-a75669ec.mp3pro.xyz/1f5ec326595ef563a0dce/Dipha%20Barus%20ft.%20Kallula%20-%20No%20One%20Can%20Stop%20Us%20%28Official%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>i dont care</p>
+                            <p>ed sheeran justin bieber</p>
+                            <p>Pop</p>
+                            <a href="http://s-a7565a9d.mp3pro.xyz/14adfae6595eeff76900a/Ed%20Sheeran%20%26%20Justin%20Bieber%20-%20I%20Don%20t%20Care%20%5BOfficial%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/honne location unknown.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>location unknown</p>
+                            <p>honne</p>
+                            <p>Alternatif/indie</p>
+                            <a href="http://s-a4447014.mp3pro.xyz/e9dc4118595ef12ea5b8c/HONNE%20-%20Location%20Unknown%20%E2%97%90%20%28Brooklyn%20Session%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/khalid talk.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>talk</p>
+                            <p>khalid</p>
+                            <p>R&B</p>
+                            <a href="http://fs1.imglov.com/server1/15/9074431785c623e100d82d.mp3?t=vCS0w_sc8rHg9ahguk5VXg&expires=1572241519&title=Khalid%20-%20Talk.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/lil nas X panini.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>panini</p>
+                            <p>lil nas X</p>
+                            <p>Alternatif/indie, Folk</p>
+                            <a href="http://s-a44472a0.mp3pro.xyz/5467582a595ef6348cee5/Lil%20Nas%20X%20-%20Panini%20%28Official%20Audio%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/lose-you-to-love-me.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>lose you to love me</p>
+                            <p>Selena Gomez</p>
+                            <p>Adult Contemporary, Pop Soul</p>
+                            <a href="http://s-a444654e.mp3pro.xyz/49398502595ef02735706/Selena%20Gomez%20-%20Lose%20You%20To%20Love%20Me.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/maroon 5 memories.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>memories</p>
+                            <p>maroon 5</p>
+                            <p>Pop</p>
+                            <a href="https://mp3cdnb.ytjar.xyz/get.php/S/SlPhMPnQ58k.mp3?h=NJCOWF0lUeAUvDPj01hDlg&s=1572487352&n=Maroon-5-Memories&dom=Iframe" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/money honey.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>money honey</p>
+                            <p>Dipha Barus</p>
+                            <p>Dance/Elektronik</p>
+                            <a href="http://s-a756577b.mp3pro.xyz/e0d05641595ef4f2ba9ef/Dipha%20Barus%20-%20Money%20Honey%20%28Count%20Me%20In%29%20%5BOfficial%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/Polka_Wars-Rangkum.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>Rangkum</p>
+                            <p>Polka_Wars</p>
+                            <p>Indie Rock</p>
+                            <a href="http://s-a4446ed6.mp3pro.xyz/89e43fa2595ef19338007/Polka%20Wars%20-%20Rangkum%20%5BOfficial%20Music%20Video%5D.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                    <li class="w3-bar" style="display:none">
+                        <div class="w3-col" style="width: 200px;">
+                            <img src="image/YOVIE WIDIANTO, Tulus & Glenn Fredly - Adu Rayu.jpg" class="w3-image">
+                        </div>
+                        <div class="w3-rest" style="margin-left: 25%;">
+                            <p>Adu Rayu</p>
+                            <p>YOVIE WIDIANTO, Tulus & Glenn Fredly</p>
+                            <p>Pop</p>
+                            <a href="http://s-a44472a0.mp3pro.xyz/81ab0d80595ef1046481e/Yovie%2C%20Tulus%2C%20Glenn%20Fredly%20-%20Adu%20Rayu%20%28Lirik%29.mp3" target="_blank" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-container w3-twothird tabs w3-animate-opacity" id="about" style="display:none">
+                <div class="w3-padding-32">
+                    <span style="font-size: 56px;width:100%" class="w3-border-bottom-black w3-border-bottom w3-left">ABOUT</span>
+
+                </div>
+                <div>
+                    <p>Musicpleer is a lightweight single-page MP3 Search Engine application that allows you to search, play and download MP3 files. Our crawlers searches the web for free publicly available MP3 files. You can explore new music, artists,
+                        albums, and more. Unlike most other similar sites, Musicpleer is not a youtube to MP3 converter, but searches the entire internet for high quality free MP3 files. As of this writing our database contains more than 3 million unique
+                        MP3 links.</p>
+                </div>
+            </div>
+            <div class="w3-container w3-twothird tabs w3-animate-opacity" id="contact" style="display:none">
+                <div class="w3-padding-32">
+                    <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">CONTACT</span>
+
+                </div>
+                <div class="w3-container">
+                    <div class="alert alert-success alert-dismissible" id="alert" style="display: none;">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Pesan telah berhasil terkirim
+                    </div>
+                    <table class="w3-table tabel">
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control clear" placeholder="Nama" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control clear" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Message</td>
+                            <td>:</td>
+                            <td>
+                                <div class="input-group">
+                                    <textarea class="form-control clear" aria-label="With textarea"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <button type="button" id="btn" class="btn btn-primary w3-margin-top" onclick="alert()"><i class="fa fa-paper-plane " aria-hidden="true"></i>Submit</button>
+            </div>
+            <div class="w3-container w3-twothird tabs w3-animate-opacity" id="faq" style="display: none;">
+                <div class="w3-padding-32">
+                    <span style="font-size: 56px;width:100%" class="w3-border-bottom-black w3-border-bottom w3-left">FAQ</span>
+
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             <h3 style="color:black">HOW DO I DOWNLOAD?</h3>
-                        </button>
-                    </h2>
-                </div>
+                            </button>
+                            </h2>
+                        </div>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        You can download from our site by clicking the download button below the player. Depending on the source or browser you're using, sometime you have to
-                        <Right-click>or, if you're using Android, long=press (press and hold) the download button, and then select "Download Link/ Save Link / Save target as..."
-                        </Right-click>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                You can download from our site by clicking the download button below the player. Depending on the source or browser you're using, sometime you have to
+                                <Right-click>or, if you're using Android, long=press (press and hold) the download button, and then select "Download Link/ Save Link / Save target as..."
+                                </Right-click>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <H3 style="color:black">WHAT IS THE OFFICIAL DOMAIN NAME OF MUSICPLEER?</H3>
-                        </button>
-                    </h2>
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                There are many fake copies of our site on the Internet using our logo and name. You can always visit the real Musicpleer by visiting our original domain "musicpleer.com" .
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        There are many fake copies of our site on the Internet using our logo and name. You can always visit the real Musicpleer by visiting our original domain "musicpleer.com" .
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="indexlogin.html" type="button" class="btn btn-primary">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModalCentersignup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Signup</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Re type Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1" style="text-decoration:underline">Syarat
+                                & Ketentuan</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="indexlogin.html" type="button" class="btn btn-primary">Signup</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="indexlogin.html" type="button" class="btn btn-primary">Login</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="exampleModalCentersignup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Signup</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Re type Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1" style="text-decoration:underline">Syarat
-                                & Ketentuan</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a href="indexlogin.html" type="button" class="btn btn-primary">Signup</a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
     </div>
 
 
-    
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+
+
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
+        $(document).ready(function() {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
         });
     </script>

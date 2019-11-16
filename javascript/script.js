@@ -120,7 +120,7 @@ function openContent(evt, cityName) {
 //             currentFocus--;
 //             addActive(x);
 //         } else if (e.keyCode == 13) {
-    
+
 //             e.preventDefault();
 //             if (currentFocus > -1) {
 //                 if (x) {
