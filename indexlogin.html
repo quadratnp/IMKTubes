@@ -15,6 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="javascript/script.js"></script>
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
             $('#btn').click(function() {
@@ -25,11 +31,11 @@
 </head>
 
 <body>
-    <nav class="w3-sidebar w3-black w3-top" style="width:300px">
-        <img src="image/logo musicpleer.png" class="w3-image w3-center w3-padding-32 w3-border-bottom w3-border-bottom-white">
+    <!-- <nav class="w3-sidebar w3-black w3-top" style="width:300px">
+        <img src="image/logo musicpleer.png" class="w3-image w3-center w3-padding-32 w3-border-bottom w3-border-bottom-white"> -->
         <!--Nomer 1 beberapa di ganti nanti-->
 
-        <div class="w3-cell-row" style="padding-top: 50%;">
+        <!-- <div class="w3-cell-row" style="padding-top: 50%;">
             <div class="w3-container w3-cell" style="padding-left: 25px;">
                 <a class="w3-button w3-hover-black"><i class="fa fa-home" style="font-size:48px; color: #FAA749;"></i></a>
             </div>
@@ -61,16 +67,63 @@
         </div>
         <div class="w3-bar w3-center w3-border-top w3-border-top-white" style="margin-top: 60%;">
             <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'about')" style="color:white" type="button"><h4>ABOUT</h4></button>
-            <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'contact')" style="color:white" type="button"><h4>CONTACT</h4></button>
+            <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'contact')" style="color:white" type="button"><h4>CONTACT</h4></button> -->
             <!-- <a  class="w3-bar-item tablink" onclick="openContent(this,'faq')"><h4>FAQ</h4></a> -->
-            <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'faq')" style="color:white" type="button"><h4>FAQ</h4></button>
+            <!-- <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'faq')" style="color:white" type="button"><h4>FAQ</h4></button>
             <h4 style="color: #FAA749;">&copy 2013-2019 Musicpleer.app</h4>
         </div>
-    </nav>
+    </nav> -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                    <img src="image/logo musicpleer.png" class="img-fluid" >
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'home')">Home</a>
+                </li>
+                <li>
+                    <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'search')">Search</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                    <p class="d-inline tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</p>
+                    <p class="d-inline tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</p>
+                    <p class="d-inline tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</p>
+            </ul>
+        </nav>
+        <div id="content">
+    
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCenter">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-light tablink" data-toggle="modal" data-target="#exampleModalCentersignup">SignUp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
     <div class="w3-container w3-twothird tabs w3-animate-opacity" id="home" style="margin-left:340px; margin-right: 40px;">
         <div class="w3-padding-32">
             <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">HOME</span>
-            <p class="w3-right">HAI, PENGGUNA</p>
+            
         </div>
         <div>
             <div class="w3-panel">
@@ -521,7 +574,7 @@
     <div class="w3-container w3-twothird tabs w3-animate-opacity" id="search" style="margin-left:340px; margin-right: 40px; display:none">
         <div class="w3-padding-32">
             <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom ">SEARCH</span>
-            <p class="w3-right">HAI, PENGGUNA</p>
+            
         </div>
         <div class="search w3-border-bottom w3-border-bottom-black">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for song" title="Type in a name">
@@ -664,7 +717,7 @@
     <div class="w3-container w3-twothird tabs w3-animate-opacity" id="about" style="margin-left:340px; margin-right: 40px;display:none">
         <div class="w3-padding-32">
             <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">ABOUT</span>
-            <p class="w3-right">HAI, PENGGUNA</p>
+            
         </div>
         <div>
             <p>Musicpleer is a lightweight single-page MP3 Search Engine application that allows you to search, play and download MP3 files. Our crawlers searches the web for free publicly available MP3 files. You can explore new music, artists, albums,
@@ -674,7 +727,7 @@
     <div class="w3-container w3-twothird tabs w3-animate-opacity" id="contact" style="margin-left:340px; margin-right: 40px;display:none">
         <div class="w3-padding-32">
             <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">CONTACT</span>
-            <p class="w3-right">HAI, PENGGUNA</p>
+            
         </div>
         <div class="alert alert-success alert-dismissible" id="alert" style="display: none;">
             <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> Pesan telah berhasil terkirim
@@ -715,7 +768,7 @@
     <div class="w3-container w3-twothird tabs w3-animate-opacity" id="faq" style="margin-left:340px; margin-right: 40px;display: none;">
         <div class="w3-padding-32">
             <span style="font-size: 56px;" class="w3-border-bottom-black w3-border-bottom w3-left">FAQ</span>
-            <p class="w3-right">HAI, PENGGUNA</p>
+            
         </div>
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -751,6 +804,22 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 
 </body>
 
