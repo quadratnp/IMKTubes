@@ -1,38 +1,42 @@
-h2:hover{
+h2:hover {
     color: #FAA749;
 }
-a:hover{
+
+a:hover {
     color: #FAA749;
 }
-.imageslideshow{
+
+.imageslideshow {
     display: none;
 }
+
 .search {
-  background: white;
-  display: flex;
-  
+    background: white;
+    display: flex;
 }
+
 .search input {
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }
+
 .search input[type="text"] {
-  flex: 1;
-  background: transparent;
-  font-size: 3em;
-  
+    flex: 1;
+    background: transparent;
+    font-size: 3em;
 }
+
 .search input[type="submit"] {
-  font-size: 2em;
-  width: 2em;
-  height: 2em;
-  cursor: pointer;
-  background-color: transparent;
-  background-image: url(https://cdn0.iconfinder.com/data/icons/basic-lines/39/search-512.png);
-  background-size: cover;
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url(https://cdn0.iconfinder.com/data/icons/basic-lines/39/search-512.png);
+    background-size: cover;
 }
+
 .search input:focus {
-  outline: none;
+    outline: none;
 }

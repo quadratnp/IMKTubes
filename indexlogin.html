@@ -23,6 +23,7 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         $(document).ready(function() {
             $('#btn').click(function() {
@@ -30,6 +31,9 @@
             });
         });
     </script>
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -100,6 +104,7 @@
                 <li>
                     <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</a>
                 </li>
+
 
             </ul>
 
@@ -241,8 +246,12 @@
                     </div>
                     <div class="w3-row-padding w3-margin-top">
                         <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/lose-you-to-love-me.jpg" class="img-fluid">
+                            <div class="w3-card w3-display-container" id="gambar">
+                                <img src="image/lose-you-to-love-me.jpg" class="img-fluid ">
+                                <div class="w3-display-middle w3-large">
+                                    <audio id="myAudio" src="song/bad guy.mp3" preload="auto"></audio>
+                                    <!-- <a id="lagu" onClick="togglePlay('myAudio')"><i  id="a1" class="fa fa-play-circle" style="font-size:48px"></i></a> -->
+                                </div>
                                 <div class="w3-container w3-center">
                                     <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">  Selena Gomez <br> 
                                             Lose You To Love Me </a>
@@ -759,9 +768,6 @@
                 </div>
             </div>
         </div>
-
-
-
         <script type="text/javascript">
             $(document).ready(function() {
                 $("#sidebar").mCustomScrollbar({
@@ -774,6 +780,33 @@
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
             });
+
+            var isPlaying = false;
+
+            function togglePlay(audio) {
+                var myAudio = document.getElementById(audio);
+
+
+                if (isPlaying) {
+                    myAudio.pause()
+                } else {
+                    myAudio.play();
+                }
+                myAudio.onplaying = function() {
+                    isPlaying = true;
+                };
+                myAudio.onpause = function() {
+                    isPlaying = false;
+                };
+            };
+            var menu = document.getElementById('a1');
+            menu.onclick = function() {
+                if (menu.className == "fa fa-play-circle") {
+                    menu.className = "fa fa-pause";
+                } else {
+                    menu.className = 'fa fa-play-circle';
+                }
+            };
         </script>
 
 </body>
