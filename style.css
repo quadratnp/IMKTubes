@@ -40,3 +40,7 @@ a:hover {
 .search input:focus {
     outline: none;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+}

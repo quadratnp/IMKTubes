@@ -16,6 +16,9 @@
     <script src="javascript/script.js"></script>
     <!-- jQuery CDN - Slim version (=without AJAX) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
     <!-- jQuery Custom Scroller CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Our Custom CSS -->
@@ -37,48 +40,7 @@
 </head>
 
 <body>
-    <!-- <nav class="w3-sidebar w3-black w3-top" style="width:300px">
-        <img src="image/logo musicpleer.png" class="w3-image w3-center w3-padding-32 w3-border-bottom w3-border-bottom-white"> -->
-    <!--Nomer 1 beberapa di ganti nanti-->
 
-    <!-- <div class="w3-cell-row" style="padding-top: 50%;">
-            <div class="w3-container w3-cell" style="padding-left: 25px;">
-                <a class="w3-button w3-hover-black"><i class="fa fa-home" style="font-size:48px; color: #FAA749;"></i></a>
-            </div>
-            <div class="w3-container w3-cell">
-                <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'home')">
-                    <h2>HOME</h2>
-                </a>
-            </div>
-        </div>
-        <div class="w3-cell-row">
-            <div class="w3-container w3-cell" style="padding-left: 25px;">
-                <a class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-search" style="font-size:48px; color: #FAA749;"></i></a>
-            </div>
-            <div class="w3-container w3-cell">
-                <a class="w3-button w3-hover-black tablink" onclick="openContent(this,'search')">
-                    <h2>SEARCH</h2>
-                </a>
-            </div>
-        </div>
-        <div class="w3-cell-row">
-            <div class="w3-container w3-cell" style="padding-left: 25px;">
-                <a class="w3-bar-item w3-button w3-hover-black"><i class="fa fa-user" style="font-size:48px; color: #FAA749;"></i></a>
-            </div>
-            <div class="w3-container w3-cell">
-                <a href="index.html" class="w3-button w3-hover-black tablink">
-                    <h2>SIGNOUT</h2>
-                </a>
-            </div>
-        </div>
-        <div class="w3-bar w3-center w3-border-top w3-border-top-white" style="margin-top: 60%;">
-            <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'about')" style="color:white" type="button"><h4>ABOUT</h4></button>
-            <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'contact')" style="color:white" type="button"><h4>CONTACT</h4></button> -->
-    <!-- <a  class="w3-bar-item tablink" onclick="openContent(this,'faq')"><h4>FAQ</h4></a> -->
-    <!-- <button class="btn btn-link w3-bar-item tablink" onclick="openContent(this,'faq')" style="color:white" type="button"><h4>FAQ</h4></button>
-            <h4 style="color: #FAA749;">&copy 2013-2019 Musicpleer.app</h4>
-        </div>
-    </nav> -->
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -95,19 +57,28 @@
                 <li>
                     <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'search')">Search</a>
                 </li>
-                <li>
-                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</a>
-                </li>
-                <li>
-                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</a>
-                </li>
-                <li>
-                    <a class="w3-button w3-hover-opacity tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</a>
-                </li>
+
 
 
             </ul>
-
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</p>
+                </li>
+                <li>
+                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</p>
+                </li>
+                <li class="w3-margin-bottom">
+                    <p class="btn btn-link d-inline  tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</p>
+                </li>
+                <li>
+                    <footer id="sticky-footer">
+                        <div class="container text-center">
+                            <small><i class="fa fa-copyright" aria-hidden="true"></i> 2019 Copyright &copy; musicpleer.com</small>
+                        </div>
+                    </footer>
+                </li>
+            </ul>
 
         </nav>
         <div id="content">
@@ -248,10 +219,6 @@
                         <div class="w3-third imageslideshow">
                             <div class="w3-card w3-display-container" id="gambar">
                                 <img src="image/lose-you-to-love-me.jpg" class="img-fluid ">
-                                <div class="w3-display-middle w3-large">
-                                    <audio id="myAudio" src="song/bad guy.mp3" preload="auto"></audio>
-                                    <!-- <a id="lagu" onClick="togglePlay('myAudio')"><i  id="a1" class="fa fa-play-circle" style="font-size:48px"></i></a> -->
-                                </div>
                                 <div class="w3-container w3-center">
                                     <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">  Selena Gomez <br> 
                                             Lose You To Love Me </a>
@@ -549,7 +516,11 @@
                             <p>Tolong</p>
                             <p>Budi Doremi</p>
                             <p>Pop</p>
-                            <a href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download" class="btn btn-warning d-inline" type="button"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <div>
+                                <a href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download" class="btn btn-warning d-inline" type="button"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                                <audio id="myAudio" src="song/Budi Doremi - Tolong (Official).mp3" preload="auto"></audio>
+                                <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio')"><img src="image/play-pause.png" style="width:10%"></a>
+                            </div>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -561,6 +532,8 @@
                             <p>Billie Eilish</p>
                             <p>Pop-trap</p>
                             <a href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio1" src="song/bad guy.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio1')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -572,6 +545,8 @@
                             <p>Dipha Barus(feat. Kallula)</p>
                             <p>Tropical House, Dance</p>
                             <a href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio2" src="song/Dipha Barus ft. Kallula  No One Can Stop Us.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio2')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -583,6 +558,8 @@
                             <p>ed sheeran justin bieber</p>
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio3" src="song/Ed Sheeran & Justin Bieber - I Don t Care [Official].mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio3')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -594,6 +571,8 @@
                             <p>honne</p>
                             <p>Alternatif/indie</p>
                             <a href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio4" src="song/HONNE - Location Unknown ◐ (Brooklyn Session).mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio4')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -605,6 +584,8 @@
                             <p>khalid</p>
                             <p>R&B</p>
                             <a href="https://drive.google.com/uc?id=1n9kyC8hnEBxkA55IDwyvl33kkoIsWd0d&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio5" src="song/Khalid - Talk.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio5')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -616,6 +597,8 @@
                             <p>lil nas X</p>
                             <p>Alternatif/indie, Folk</p>
                             <a href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio6" src="song/Panini Lil nas.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio6')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -627,6 +610,8 @@
                             <p>Selena Gomez</p>
                             <p>Adult Contemporary, Pop Soul</p>
                             <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio7" src="song/Selena Gomez - Lose You To Love Me.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio7')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -638,6 +623,8 @@
                             <p>maroon 5</p>
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio8" src="song/Maroon-5-Memories.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio8')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -649,6 +636,8 @@
                             <p>Dipha Barus</p>
                             <p>Dance/Elektronik</p>
                             <a href="https://drive.google.com/uc?id=1sLLS9PdJ_i2bzGbzN5xywdxtK6bY_OFB&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio9" src="song/Dipha Barus - Money Honey (.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio9')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -660,6 +649,8 @@
                             <p>Polka_Wars</p>
                             <p>Indie Rock</p>
                             <a href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio10" src="song/Polka Wars - Rangkum.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio10')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
@@ -671,6 +662,8 @@
                             <p>YOVIE WIDIANTO, Tulus & Glenn Fredly</p>
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=1AX0NfudR_O0XYcSLahvgnQindjpnR79i&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                            <audio id="myAudio11" src="song/Yovie, Tulus, Glenn Fredly - Adu Rayu.mp3" preload="auto"></audio>
+                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio11')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                 </ul>
@@ -744,8 +737,7 @@
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                You can download from our site by clicking the download button below the player. Depending on the source or browser you're using, sometime you have to
-                                <Right-click>or, if you're using Android, long=press (press and hold) the download button, and then select "Download Link/ Save Link / Save target as..."
+                                You can download from our site by clicking name of the song at home page, also you can download from search page, by clicking download button .
                                 </Right-click>
                             </div>
                         </div>
@@ -785,7 +777,7 @@
 
             function togglePlay(audio) {
                 var myAudio = document.getElementById(audio);
-
+                myAudio.volume = 0.1;
 
                 if (isPlaying) {
                     myAudio.pause()
@@ -798,14 +790,6 @@
                 myAudio.onpause = function() {
                     isPlaying = false;
                 };
-            };
-            var menu = document.getElementById('a1');
-            menu.onclick = function() {
-                if (menu.className == "fa fa-play-circle") {
-                    menu.className = "fa fa-pause";
-                } else {
-                    menu.className = 'fa fa-play-circle';
-                }
             };
         </script>
 
