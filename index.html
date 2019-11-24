@@ -66,7 +66,7 @@
                 <li>
                     <footer id="sticky-footer">
                         <div class="container text-center">
-                            <small><i class="fa fa-copyright" aria-hidden="true"></i> 2019 Copyright &copy; musicpleer.com</small>
+                            <small style="color:grey"><i class="fa fa-copyright" aria-hidden="true"></i> 2019 Copyright &copy; musicpleer.com</small>
                         </div>
                     </footer>
                 </li>
@@ -78,10 +78,10 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
                                 <i class="fas fa-align-left"></i>
                                 <span>Toggle Sidebar</span>
-                            </button>
+                            </button> -->
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <i class="fas fa-align-justify"></i>
                             </button>
@@ -206,54 +206,49 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w3-row-padding w3-margin-top">
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/lose-you-to-love-me.jpg" class="img-fluid">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">  Selena Gomez <br> 
-                                            Lose You To Love Me </a>
-                                </div>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Selena Gomez</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You To Love me</a>
+                            </div>
+                            </p>
+
+                        </div>
+                        <div class="card">
+                            <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Maroon 5</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
+
                             </div>
                         </div>
-
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/maroon 5 memories.jpg" class="img-fluid">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Maroon 5 <br>
-                                            Memories</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="img-fluid">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">Ed Sheeran&Justin Bieber
-                                            <br> I Don't Care</a>
-                                </div>
+                        <div class="card">
+                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">ed sheeran & Justin Bieber</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <div class="we-panel">
+                    <div class="w3-panel">
                         <h3 class="w3-left">
                             Old Songs
                         </h3>
-                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable1">
-                            See all
-                        </button>
-                        <div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable">
+                                See all
+                            </button>
+                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Old Songs</h5>
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">New Release</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="card-group">
@@ -261,15 +256,17 @@
                                                 <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Selena Gomez</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You to Love Me</a>
-
+                                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You To Love me</a>
                                                 </div>
+                                                </p>
+
                                             </div>
                                             <div class="card">
                                                 <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Maroon 5</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -277,7 +274,6 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">ed sheeran & Justin Bieber</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -287,6 +283,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Honne</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -294,6 +291,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Polka Wars</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -301,6 +299,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -310,6 +309,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Budi Doremi</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -324,6 +324,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Lil Nas X</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -332,55 +333,46 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="w3-row-padding w3-margin-top">
-                    <div class="w3-third imageslideshow">
-                        <div class="w3-card">
-                            <img src="image/honne location unknown.jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Honne
-                                            <br> Location Unknown</a>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="image/honne location unknown.jpg" class="card-img-top">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Honne</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="w3-third">
-                        <div class="w3-card imageslideshow">
-                            <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Polka Wars
-                                            <br> Rangkum</a>
+                        <div class="card">
+                            <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Polka Wars</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="w3-third">
-                        <div class="w3-card imageslideshow">
-                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">Dipha Barus (feat. Kallula)
-                                            <br> No One Can Stop Us</a>
+                        <div class="card">
+                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div>
-                    <div>
+                    <div class="w3-panel">
                         <h3 class="w3-left">
-                            Top Songs 2018
+                            Old Songs
                         </h3>
-                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable2">
-                            See all
-                        </button>
-                        <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable">
+                                    See all
+                                </button>
+                        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Top Songs 2018</h5>
+                                        <h5 class="modal-title" id="exampleModalScrollableTitle">New Release</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
+                                            <span aria-hidden="true">&times;</span>
+                                          </button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="card-group">
@@ -388,14 +380,17 @@
                                                 <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Selena Gomez</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You to Love Me</a>
+                                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You To Love me</a>
                                                 </div>
+                                                </p>
+
                                             </div>
                                             <div class="card">
                                                 <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Maroon 5</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -412,6 +407,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Honne</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -419,6 +415,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Polka Wars</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -426,6 +423,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -435,6 +433,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Budi Doremi</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -449,6 +448,7 @@
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Lil Nas X</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -457,34 +457,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w3-row-padding w3-margin-top">
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/tolong budi doremi.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Budi Doremi
-                                            <br> Tolong</a>
-                                </div>
+                    <div class="card-group">
+                        <div class="card">
+                            <img src="image/tolong budi doremi.jpg" class="card-img-top">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Budi Doremi</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
+
                             </div>
                         </div>
-
-                        <div class="w3-third">
-                            <div class="w3-card imageslideshow">
-                                <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Billie Eilish
-                                            <br> Bad Guy</a>
-                                </div>
+                        <div class="card">
+                            <img src="image/billie eilish bad guy.jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Billie Eilish</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Bad Guy</a>
                             </div>
                         </div>
+                        <div class="card">
+                            <img src="image/lil nas X panini.jpg" class="card-img-top" alt="...">
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Lil Nas X</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
 
-                        <div class="w3-third">
-                            <div class="w3-card imageslideshow">
-                                <img src="image/lil nas X panini.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Lil Nas X
-                                        <br> Panini</a>
-                                </div>
                             </div>
                         </div>
                     </div>

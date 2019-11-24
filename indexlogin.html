@@ -35,7 +35,41 @@
         });
     </script>
     <style>
-
+        .container {
+            position: relative;
+        }
+        
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .container:hover .image {
+            opacity: 0.3;
+        }
+        
+        .container:hover .middle {
+            opacity: 1;
+        }
+        
+        .text {
+            color: white;
+        }
     </style>
 </head>
 
@@ -63,18 +97,18 @@
             </ul>
             <ul class="list-unstyled CTAs">
                 <li>
-                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'about')" style="font-size:14px">ABOUT</p>
+                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'about')" style="font-size:14px;color:grey">ABOUT</p>
                 </li>
                 <li>
-                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'contact')" style="font-size:14px">CONTACT</p>
+                    <p class="btn btn-link d-inline tablink" onclick="openContent(this,'contact')" style="font-size:14px;color:grey">CONTACT</p>
                 </li>
                 <li class="w3-margin-bottom">
-                    <p class="btn btn-link d-inline  tablink" onclick="openContent(this,'faq')" style="font-size:14px">FAQ</p>
+                    <p class="btn btn-link d-inline  tablink" onclick="openContent(this,'faq')" style="font-size:14px;color:grey">FAQ</p>
                 </li>
                 <li>
                     <footer id="sticky-footer">
                         <div class="container text-center">
-                            <small><i class="fa fa-copyright" aria-hidden="true"></i> 2019 Copyright &copy; musicpleer.com</small>
+                            <small style="color:grey"><i class="fa fa-copyright" aria-hidden="true"></i> 2019 Copyright &copy; musicpleer.com</small>
                         </div>
                     </footer>
                 </li>
@@ -86,10 +120,10 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
                             <i class="fas fa-align-left"></i>
                             <span>Toggle Sidebar</span>
-                        </button>
+                        </button> -->
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fas fa-align-justify"></i>
                         </button>
@@ -98,6 +132,7 @@
 
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
                                 <a>HAI, PENGGUNA</a>
@@ -134,17 +169,28 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="card-group">
-                                            <div class="card">
-                                                <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
+                                            <div class="card ">
+                                                <div class="container">
+                                                    <img src="image/lose-you-to-love-me.jpg" class="card-img-top image">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio7')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Selena Gomez</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You To Love me</a>
                                                 </div>
-                                                </p>
+
+
 
                                             </div>
                                             <div class="card">
-                                                <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/maroon 5 memories.jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio8')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Maroon 5</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
@@ -152,7 +198,12 @@
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio3')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">ed sheeran & Justin Bieber</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
@@ -161,7 +212,12 @@
                                         </div>
                                         <div class="card-group">
                                             <div class="card">
-                                                <img src="image/honne location unknown.jpg" class="card-img-top">
+                                                <div class="container">
+                                                    <img src="image/honne location unknown.jpg" class="card-img-top image">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio4')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Honne</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
@@ -169,7 +225,12 @@
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio10')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Polka Wars</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
@@ -177,7 +238,12 @@
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio2')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
@@ -187,7 +253,12 @@
                                         </div>
                                         <div class="card-group">
                                             <div class="card">
-                                                <img src="image/tolong budi doremi.jpg" class="card-img-top">
+                                                <div class="container">
+                                                    <img src="image/tolong budi doremi.jpg" class="card-img-top image">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Budi Doremi</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
@@ -195,14 +266,24 @@
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <img src="image/billie eilish bad guy.jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/billie eilish bad guy.jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio1')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Billie Eilish</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Bad Guy</a>
                                                 </div>
                                             </div>
                                             <div class="card">
-                                                <img src="image/lil nas X panini.jpg" class="card-img-top" alt="...">
+                                                <div class="container">
+                                                    <img src="image/lil nas X panini.jpg" class="card-img-top image" alt="...">
+                                                    <div class="middle">
+                                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio6')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                                    </div>
+                                                </div>
                                                 <div class="card-body w3-center">
                                                     <h5 class="card-title">Lil Nas X</h5>
                                                     <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
@@ -216,37 +297,51 @@
                         </div>
                     </div>
                     <div class="w3-row-padding w3-margin-top">
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card w3-display-container" id="gambar">
-                                <img src="image/lose-you-to-love-me.jpg" class="img-fluid ">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">  Selena Gomez <br> 
-                                            Lose You To Love Me </a>
+                        <div class="card-group">
+                            <div class="card ">
+                                <div class="container">
+                                    <img src="image/lose-you-to-love-me.jpg" class="card-img-top image">
+                                    <div class="middle">
+                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio7')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                    </div>
+                                </div>
+                                <div class="card-body w3-center">
+                                    <h5 class="card-title">Selena Gomez</h5>
+                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You To Love me</a>
+                                </div>
+
+
+
+                            </div>
+                            <div class="card">
+                                <div class="container">
+                                    <img src="image/maroon 5 memories.jpg" class="card-img-top image" alt="...">
+                                    <div class="middle">
+                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio8')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                    </div>
+                                </div>
+                                <div class="card-body w3-center">
+                                    <h5 class="card-title">Maroon 5</h5>
+                                    <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
+
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/maroon 5 memories.jpg" class="img-fluid">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Maroon 5 <br>
-                                            Memories</a>
+                            <div class="card">
+                                <div class="container">
+                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top image" alt="...">
+                                    <div class="middle">
+                                        <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio3')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="img-fluid">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">Ed Sheeran&Justin Bieber
-                                            <br> I Don't Care</a>
+                                <div class="card-body w3-center">
+                                    <h5 class="card-title">ed sheeran & Justin Bieber</h5>
+                                    <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div>
                     <div class="we-panel">
                         <h3 class="w3-left">
@@ -343,156 +438,179 @@
                     </div>
                 </div>
                 <div class="w3-row-padding w3-margin-top">
-                    <div class="w3-third imageslideshow">
-                        <div class="w3-card">
-                            <img src="image/honne location unknown.jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Honne
-                                            <br> Location Unknown</a>
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="container">
+                                <img src="image/honne location unknown.jpg" class="card-img-top image">
+                                <div class="middle">
+                                    <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio4')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                </div>
+                            </div>
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Honne</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="container">
+                                <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top image" alt="...">
+                                <div class="middle">
+                                    <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio10')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                </div>
+                            </div>
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Polka Wars</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
+
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="container">
+                                <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top image" alt="...">
+                                <div class="middle">
+                                    <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio2')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                </div>
+                            </div>
+                            <div class="card-body w3-center">
+                                <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
+                                <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
+
                             </div>
                         </div>
                     </div>
 
-                    <div class="w3-third">
-                        <div class="w3-card imageslideshow">
-                            <img src="image/Polka_Wars-Rangkum.jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Polka Wars
-                                            <br> Rangkum</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="w3-third">
-                        <div class="w3-card imageslideshow">
-                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" style="width:100%">
-                            <div class="w3-container w3-center">
-                                <a href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">Dipha Barus (feat. Kallula)
-                                            <br> No One Can Stop Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
                     <div>
-                        <h3 class="w3-left">
-                            Top Songs 2018
-                        </h3>
-                        <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable2">
+                        <div>
+                            <h3 class="w3-left">
+                                Top Songs 2018
+                            </h3>
+                            <button type="button" class="btn btn-link w3-right" data-toggle="modal" data-target="#exampleModalScrollable2">
                             See all
                         </button>
-                        <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Top Songs 2018</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalScrollableTitle">Top Songs 2018</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="card-group">
+                                                <div class="card">
+                                                    <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Selena Gomez</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You to Love Me</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Maroon 5</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">ed sheeran & Justin Bieber</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-group">
+                                                <div class="card">
+                                                    <img src="image/honne location unknown.jpg" class="card-img-top">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Honne</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Polka Wars</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-group">
+                                                <div class="card">
+                                                    <img src="image/tolong budi doremi.jpg" class="card-img-top">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Budi Doremi</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/billie eilish bad guy.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Billie Eilish</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Bad Guy</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card">
+                                                    <img src="image/lil nas X panini.jpg" class="card-img-top" alt="...">
+                                                    <div class="card-body w3-center">
+                                                        <h5 class="card-title">Lil Nas X</h5>
+                                                        <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="card-group">
-                                            <div class="card">
-                                                <img src="image/lose-you-to-love-me.jpg" class="card-img-top">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Selena Gomez</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download">Lose You to Love Me</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/maroon 5 memories.jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Maroon 5</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download">Memories</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">ed sheeran & Justin Bieber</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download">I Don't Care</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-group">
-                                            <div class="card">
-                                                <img src="image/honne location unknown.jpg" class="card-img-top">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Honne</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download">Location Unknown</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/Polka_Wars-Rangkum.jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Polka Wars</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download">Rangkum</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Dipha Barus (feat. Kallula)</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download">No One Can Stop Us</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-group">
-                                            <div class="card">
-                                                <img src="image/tolong budi doremi.jpg" class="card-img-top">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Budi Doremi</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/billie eilish bad guy.jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Billie Eilish</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Bad Guy</a>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <img src="image/lil nas X panini.jpg" class="card-img-top" alt="...">
-                                                <div class="card-body w3-center">
-                                                    <h5 class="card-title">Lil Nas X</h5>
-                                                    <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
-                                                </div>
-                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding w3-margin-top">
+                            <div class="card-group">
+                                <div class="card">
+                                    <div class="container">
+                                        <img src="image/tolong budi doremi.jpg" class="card-img-top image">
+                                        <div class="middle">
+                                            <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio')"><img src="image/play-pause.png" style="width:25%"></a></button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w3-row-padding w3-margin-top">
-                        <div class="w3-third imageslideshow">
-                            <div class="w3-card">
-                                <img src="image/tolong budi doremi.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Budi Doremi
-                                            <br> Tolong</a>
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="card-body w3-center">
+                                        <h5 class="card-title">Budi Doremi</h5>
+                                        <a class="card-text" href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download">Tolong</a>
 
-                        <div class="w3-third">
-                            <div class="w3-card imageslideshow">
-                                <img src="image/billie eilish bad guy.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Billie Eilish
-                                            <br> Bad Guy</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="card">
+                                    <div class="container">
+                                        <img src="image/billie eilish bad guy.jpg" class="card-img-top image" alt="...">
+                                        <div class="middle">
+                                            <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio1')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body w3-center">
+                                        <h5 class="card-title">Billie Eilish</h5>
+                                        <a class="card-text" href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download">Bad Guy</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="container">
+                                        <img src="image/lil nas X panini.jpg" class="card-img-top image" alt="...">
+                                        <div class="middle">
+                                            <button class="text"><a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio6')"><img src="image/play-pause.png" style="width:25%"></a></button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body w3-center">
+                                        <h5 class="card-title">Lil Nas X</h5>
+                                        <a class="card-text" href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Panini</a>
 
-                        <div class="w3-third">
-                            <div class="w3-card imageslideshow">
-                                <img src="image/lil nas X panini.jpg" style="width:100%">
-                                <div class="w3-container w3-center">
-                                    <a href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download">Lil Nas X
-                                        <br> Panini</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -510,7 +628,14 @@
                 <ul id="myUL">
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/tolong budi doremi.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/tolong budi doremi.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                    <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio')"><img src="image/play-pause.png" style="width:25%"></a>
+                                </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>Tolong</p>
@@ -519,13 +644,20 @@
                             <div>
                                 <a href="https://drive.google.com/uc?id=1p7gKLJ1TTPDBv8v5_YJkAsLIzJfOj4M3&export=download" class="btn btn-warning d-inline" type="button"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                                 <audio id="myAudio" src="song/Budi Doremi - Tolong (Official).mp3" preload="auto"></audio>
-                                <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio')"><img src="image/play-pause.png" style="width:10%"></a>
+
                             </div>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/billie eilish bad guy.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/billie eilish bad guy.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio1')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>Bad Guy</p>
@@ -533,12 +665,18 @@
                             <p>Pop-trap</p>
                             <a href="https://drive.google.com/uc?authuser=0&id=1-7UR7s3qqqxDKNkSI_l9isnATnSZj0-v&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio1" src="song/bad guy.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio1')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/Dipha Barus - No One Can Stop Us (feat. Kallula).jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio2')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>No One Can Stop Us</p>
@@ -546,12 +684,18 @@
                             <p>Tropical House, Dance</p>
                             <a href="https://drive.google.com/uc?id=1GU1ddlq6u6gDke3RCySdXPoJg87bDVZ7&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio2" src="song/Dipha Barus ft. Kallula  No One Can Stop Us.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio2')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/ed_sheeran_justin_bieber-i_dont_care.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio3')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>i dont care</p>
@@ -559,12 +703,18 @@
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=18SFHK3CMpR78O7Mg8PEx1EKEXpKfsUDb&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio3" src="song/Ed Sheeran & Justin Bieber - I Don t Care [Official].mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio3')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/honne location unknown.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/honne location unknown.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio4')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>location unknown</p>
@@ -572,12 +722,18 @@
                             <p>Alternatif/indie</p>
                             <a href="https://drive.google.com/uc?id=10FfGY0-tWBy480w7SSvE88TXDLs-zu1A&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio4" src="song/HONNE - Location Unknown ◐ (Brooklyn Session).mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio4')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/khalid talk.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/khalid talk.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio5')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>talk</p>
@@ -585,12 +741,18 @@
                             <p>R&B</p>
                             <a href="https://drive.google.com/uc?id=1n9kyC8hnEBxkA55IDwyvl33kkoIsWd0d&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio5" src="song/Khalid - Talk.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio5')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/lil nas X panini.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/lil nas X panini.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio6')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>panini</p>
@@ -598,12 +760,18 @@
                             <p>Alternatif/indie, Folk</p>
                             <a href="https://drive.google.com/uc?id=1Js3WgmUjwzC5qYF0HfTuRaYeLv2GOZwo&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio6" src="song/Panini Lil nas.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio6')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/lose-you-to-love-me.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/lose-you-to-love-me.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio7')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>lose you to love me</p>
@@ -611,12 +779,18 @@
                             <p>Adult Contemporary, Pop Soul</p>
                             <a href="https://drive.google.com/uc?id=18j_wZZ6Vtj8iW10trxA_ZovrLsoeS0iq&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio7" src="song/Selena Gomez - Lose You To Love Me.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio7')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/maroon 5 memories.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/maroon 5 memories.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio8')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>memories</p>
@@ -624,12 +798,18 @@
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=1ZCh-Gnt-Gyo7sAr23pvpmKCmXjqUvCuf&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio8" src="song/Maroon-5-Memories.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio8')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/money honey.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/money honey.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio9')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>money honey</p>
@@ -637,12 +817,18 @@
                             <p>Dance/Elektronik</p>
                             <a href="https://drive.google.com/uc?id=1sLLS9PdJ_i2bzGbzN5xywdxtK6bY_OFB&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio9" src="song/Dipha Barus - Money Honey (.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio9')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/Polka_Wars-Rangkum.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/Polka_Wars-Rangkum.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio10')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>Rangkum</p>
@@ -650,12 +836,18 @@
                             <p>Indie Rock</p>
                             <a href="https://drive.google.com/uc?id=1DqUROLIpkmkwjYvpKKZuY02-9G5uvUwx&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio10" src="song/Polka Wars - Rangkum.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio10')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                     <li class="w3-bar" style="display:none">
                         <div class="w3-col" style="width: 200px;">
-                            <img src="image/YOVIE WIDIANTO, Tulus & Glenn Fredly - Adu Rayu.jpg" class="w3-image">
+                            <div class="container">
+                                <img src="image/YOVIE WIDIANTO, Tulus & Glenn Fredly - Adu Rayu.jpg" class="w3-image image">
+                                <div class="middle">
+                                    <button>
+                                        <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio11')"><img src="image/play-pause.png" style="width:25%"></a>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="w3-rest" style="margin-left: 25%;">
                             <p>Adu Rayu</p>
@@ -663,7 +855,6 @@
                             <p>Pop</p>
                             <a href="https://drive.google.com/uc?id=1AX0NfudR_O0XYcSLahvgnQindjpnR79i&export=download" type="button" class="btn btn-warning d-inline"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
                             <audio id="myAudio11" src="song/Yovie, Tulus, Glenn Fredly - Adu Rayu.mp3" preload="auto"></audio>
-                            <a class="btn d-inline" id="lagu" onClick="togglePlay('myAudio11')"><img src="image/play-pause.png" style="width:10%"></a>
                         </div>
                     </li>
                 </ul>
@@ -739,6 +930,20 @@
                             <div class="card-body">
                                 You can download from our site by clicking name of the song at home page, also you can download from search page, by clicking download button .
                                 </Right-click>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <H3 style="color:black">WHAT IS THE OFFICIAL DOMAIN NAME OF MUSICPLEER?</H3>
+                        </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                There are many fake copies of our site on the Internet using our logo and name. You can always visit the real Musicpleer by visiting our original domain "musicpleer.com" .
                             </div>
                         </div>
                     </div>
