@@ -9,6 +9,7 @@ body, html {
     background: #fafafa;
 }
 .Responsive{
+    width: 75%;
     padding-top: 8px;
     max-width: 400px;
     height: auto;
