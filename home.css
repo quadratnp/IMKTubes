@@ -1,0 +1,61 @@
+/*
+    CSS FOR HOME.HTML
+*/
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+.Responsive{
+    padding-top: 8px;
+    max-width: 400px;
+    height: auto;
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgimg-1 {
+    background-image: url('image/background.jpg');
+    min-height: 100%;
+}
+.bgimg-2 {
+    background-image: url("/w3images/parallax2.jpg");
+    min-height: 400px;
+}
+.bgimg-3 {
+    background-image: url("image/gitar.jpg");
+    min-height: 400px;
+}
+.w3-wide {
+    letter-spacing: 10px;
+}
+.w3-hover-opacity {
+    cursor: pointer;
+}
+.map-container-6{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+.map-container-6 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+@media only screen and (max-device-width: 1600px) {
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+    }
+}
+/*
+    END OF CSS FOR HOME.HTML
+*/
